@@ -52,3 +52,11 @@ Alternatively, you can run `lovec game` in the terminal.
 │
 └── Root                Root access to the workspace
 ```
+
+
+
+assets presi da:
+- [swoosh.mp3](https://www.videvo.net/sound-effect/bird-wing-flap-10/405561/)
+- [point.mp3](https://www.videvo.net/sound-effect/ui-arcade-coin-up-02/5095901/)
+
+sprite realizzati da me su aseprite.

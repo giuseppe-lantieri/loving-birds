@@ -1,5 +1,5 @@
-name = "Game"
-default_targets = ["win32", "win64", "macos", "lovejs"]
+name = "loving-birds"
+default_targets = ["macos", "lovejs"]
 build_directory = "../builds"
 love_files = [
     "+*",
