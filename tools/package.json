@@ -1,6 +1,17 @@
 {
 	"scripts": {
 		"Run": "lovec .",
-		"Build": "cd ../game & makelove --config ../tools/build/makelove.toml"
+		"Build": "cd ../game & makelove --config ../tools/build/makelove.toml",
+		"clear": "cd ../builds && del \"loving-bird.love\"",
+		"zip": "cd ../game && TAR avcf ../builds/loving-bird.zip --exclude=.vscode --exclude=lib --exclude=src --exclude=*/.gitkeep --exclude=*.zip --exclude=*.love * && ren \"../builds/loving-bird.zip\" \"../builds/loving-bird.love\"",
+		"love": "ren \"../builds/loving-bird.zip\" \"../builds/loving-bird.love\"",
+		"build-ws": "copy /b \"C:\\Program Files\\LOVE\\love.exe\"+\"..\\builds\\loving-bird.love\" \"../builds/loving-bird.exe\"",
+		"zip-build-ws": "npm run zip && npm run build-ws",
+		"build-js": "npx love.js.cmd \"../builds/loving-bird.love\" ../builds/loving-bird -c -t=loving-bird",
+		"zip-build-js": "npm run zip && npm run build-js",
+		"builds": "npm run clear && npm run zip && npm run build-js && npm run build-ws"
+	},
+	"dependencies": {
+		"love.js": "^11.4.1"
 	}
 }
